@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>course form</title>
+</head>
+<body>
+<h1>Fill the below form</h1>
+<form action="feedback.html" target="_self">
+  <h3 style="color:DodgerBlue;">Enter name</h3>
+  <label for="name">Name:</label><br>
+  <input type="text" id="name" name="fname">
+  <h3 style="color:DodgerBlue;">Enter Phone number</h3>
+  <label for="phone">Phone number:</label><br>
+  <input type="tel" id="phone" name="phone" pattern="[0-9]{10}">
+  <h3 style="color:DodgerBlue;">Select choice of course</h3>
+  <input type="radio" id="Bachelors" name="course" value="Bachelors">
+  <label for="Bachelors">Bachelors</label><br>
+  <input type="radio" id="Masters" name="course" value="Masters">
+  <label for="Masters">Masters</label><br>
+  <h3 style="color:DodgerBlue;">What are your expectations?</h3>
+  <textarea name="message" rows="5" cols="50"></textarea><br>
+  <h3 style="color:DodgerBlue;">Select interested subjects</h3>
+  <input type="checkbox" id="Subject1" name="Subject1" value="Subject">
+  <label for="Subject1"> Machine Learning</label><br>
+  <input type="checkbox" id="Subject2" name="Subject2" value="Subject">
+  <label for="Subject2"> Cloud computing</label><br>
+  <input type="checkbox" id="Subject3" name="Subject3" value="Subject">
+  <label for="Subject3"> IOT</label><br>
+  <input type="checkbox" id="Subject4" name="Subject4" value="Subject">
+  <label for="Subject4"> Artificial Intelligence</label><br><br>
+  <input type="submit" value="Register">
+  
+</form>
