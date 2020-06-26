@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>FORM ATTRIBUTES</title>
+<script>
+function display() {
+  DispWin = window.open('','NewWin', 'toolbar=no,status=no,width=300,height=200')
+  message = "<ul><li><b>Name: </b>" + document.form1.name.value;
+  message += "<li><b>Address: </b>" + document.form1.address.value;
+  message += "<li><b>Phone: </b>" + document.form1.phone.value + "</ul>";
+  DispWin.document.write(message);
+}
+</script>
+</head>
+<body><h1>FORM ATTRIBUTES</h1>
+<h3>Enter the following information. When you press the Display button,
+the data you entered will be displayed in a pop-up window.</h3>
+<form name="form1">
+<p><b>Name:</b> <input type="text" size="20" name="name">
+</p>
+<p><b>Address:</b> <input type="text" size="30" name="address">
+</p>
+<p><b>Phone: </b> <input type="text" size="15" name="phone">
+</p>
+<p><input type="button" value="Submit" onClick="display();"></p>
+</form>
+</body>
+</html>
