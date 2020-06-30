@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><title>JavaScript Full Task</title>
+<meta charset="UTF-8">
+<style>
+table {
+  width:60%;
+}
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 15px;
+  text-align: left;
+}
+#t01 th {
+  background-color: black;
+  color: white;
+}
+</style>
+</head>
+<body>
+
+<h2>Press F12 ,check output for variables in the console </h2>
+<script language="JavaScript">
+var x=5,y=6;
+console.log(x);
+console.log(y)
+</script>
+<h3>Type casting</h3>
+<button onclick="myArray()">Check the type</button>
+<p id="a"></p>
+<script language="JavaScript">
+function myArray()
+ {
+var A = [1,2,3,4,5];
+var X=A[3].toString();
+document.getElementById("a").innerHTML =typeof X;
+
+}
+</script>
+<p>Total marks and average marks by adding new rows</p>
+<p id="table1"></p>
+<table id="t01">
+   <caption>SEMESTER MARKS</caption>
+  <tr>
+    <th>SUBJECTS</th>
+    <th>GRADE</th> 
+  </tr>
+  <tr>
+    <td>Advanced Data Structures</td>
+    <td>70</td>
+  </tr>
+  <tr>
+    <td>Mathematical Foundations of Computer Science</td>
+    <td>75</td>
+  </tr>
+  <tr>
+    <td>Advanced Algorithms</td>
+    <td>80</td>
+  </tr>
+  <tr>
+    <td>Machine Learning</td>
+    <td>90</td>
+  </tr>
+  <tr><td><b>Total</b></td>
+  <td id="total"></td>
+  </tr>
+  <tr><td><b>Average</b></td>
+  <td id="avg"></td>
+  </tr>
+  </table>
+  <script language="JavaScript">
+  function avg(n1,n2,n3,n4)
+  {
+  var ans;
+ans= (Number(n1) + Number(n2) + Number(n3) + Number(n4)) / 4;
+return (ans);
+}
+function total(n1,n2,n3,n4){
+var tot;
+tot=n1+n2+n3+n4;
+return tot;
+}
+var n1 = 70;
+var n2 = 75;
+var n3 = 80;
+var n4 = 90;
+document.getElementById("avg").innerHTML =avg(n1, n2, n3, n4);
+document.getElementById("total").innerHTML =total(n1, n2, n3, n4);
+</script>
+<br>
+<p><b>Calculating Power,square root,absolute value,printing random number,ceiling it,flooring,running trigonometric function</b></p>
+
+<p id="power"></p>
+<p id="squareroot"></p>
+<p id="absoluteval"></p>
+<p id="rand"></p>
+<p id="ceil"></p>
+<p id="floor"></p>
+<p id="trig"></p>
+
+<script language="JavaScript">
+document.getElementById("power").innerHTML = Math.pow(2,5);
+document.getElementById("squareroot").innerHTML = Math.sqrt(225);
+document.getElementById("absoluteval").innerHTML = Math.abs(-100);
+document.getElementById("rand").innerHTML = Math.random();
+document.getElementById("ceil").innerHTML = Math.ceil(5.4);
+document.getElementById("floor").innerHTML = Math.floor(5.4);
+document.getElementById("trig").innerHTML = Math.sin(90*Math.PI/180);
+</script>
+<form action="file:///C:/Users/mythri/repo/feedback.html" onSubmit=" return validateForm()" method="post">
+  <h3 style="color:DodgerBlue;">Enter Phone number</h3>
+  <label for="phone">Phone number:</label><br>
+  <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+  <h3 style="color:DodgerBlue;">Select choice of course</h3>
+  <input type="checkbox" id="1" name="course" value="Machine Learning" onclick="validateForm()" >
+ <label for="Machine Learning">Machine Learning</label><br>
+  <input type="checkbox" id="2" name="course1" value="Soft computing" onclick="validateForm()">
+  <label for="Soft computing">Soft computing</label><br>
+  <input type="submit"  name="submit" value="Submit" >
+  
+</form>
+<script language="JavaScript">
+function validateForm() {
+  var  a=document.getElementById("phone").required;
+  var  b=document.getElementById("1");
+  var  c=document.getElementById("2");
+  
+  if (a==true && (b.checked == true || c.checked== true)){
+    return true;
+  } 
+  else {
+     alert("Enter the phone number and select atleast one checkbox")
+	 return false;
+  }
+}
+</script>
+
+
+
+</body>
+</html> 
