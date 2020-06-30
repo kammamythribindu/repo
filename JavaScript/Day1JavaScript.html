@@ -111,9 +111,12 @@ document.getElementById("floor").innerHTML = Math.floor(5.4);
 document.getElementById("trig").innerHTML = Math.sin(90*Math.PI/180);
 </script>
 <form action="file:///C:/Users/mythri/repo/feedback.html" onSubmit=" return validateForm()" method="post">
+  <h3 style="color:DodgerBlue;">Enter Name</h3>
+  <label for="name">NAME:</label><br>
+  <input type="text" id="name" name="name" placeholder="[A-Z]{10}" pattern="[A-Z]{10}" required>
   <h3 style="color:DodgerBlue;">Enter Phone number</h3>
   <label for="phone">Phone number:</label><br>
-  <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+  <input type="tel" id="phone" name="phone" placeholder="[0-9]{10}" pattern="[0-9]{10}" required>
   <h3 style="color:DodgerBlue;">Select choice of course</h3>
   <input type="checkbox" id="1" name="course" value="Machine Learning" onclick="validateForm()" >
  <label for="Machine Learning">Machine Learning</label><br>
