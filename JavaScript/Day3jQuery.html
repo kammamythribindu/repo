@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap & jQuery</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <style>
+  ul 
+  {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid #e7e7e7;
+  background-color: black;
+  }
+
+  li 
+  {
+  float: left;
+  }
+
+  li a 
+  {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  }
+
+  li a:hover 
+  {
+  background-color: lightblue;
+  }
+
+  li a.active 
+  {
+  color: white;
+  background-color: lightblue;
+  }
+  .nav li
+  {
+  display: inline-block;
+  margin-left: 15%;
+  }
+  .clear{ clear: both;}
+  .disp
+  {
+   display:block;
+   visibility:visible;
+  }
+  .container
+  {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   }
+  </style>
+  </head>
+  <body>
+  <div class="clear">
+	<nav id="navbarTop" class="navbar navbar-expand-sm bg-light justify-content-center">
+		<ul>
+			<li><a class="active" href="#">Home</a></li>
+			<li><a href="#">Courses</a></li>
+			<li><a href="#">Books</a></li>
+			<li><a href="#">References</a></li>
+			<li><a href="#">FAQ</a></li>
+  
+		</ul>
+	</nav>
+  </div>
+  <div class="container-fluid">
+	<div class="alert alert-primary">
+	<strong>Successfully created my first Bootstrap page with jQuery included</strong>
+  </div>
+  </div>
+
+
+	<div id="main" class="container" >
+ 
+		<button id="menu-fadetoggle" type="button" class="btn btn-primary" >Click me</button>
+ 
+       
+	</div>
+	<br>
+  <script>
+	$(document).ready(function(){
+	$("#menu-fadetoggle").on('click',function(){
+		$("#navbarTop").fadeToggle(900,function(){
+			alert("Click again to fade in/fade out");
+		});
+    });
+	$("#H1").click(function(){
+		$("p").hide(800,function(){
+		alert('Text hidden');
+	  });
+	});
+	$("#S1").click(function(){
+		$("p").show(800);
+	});
+	});
+  </script>
+	<p class="disp"><strong>Bootstrap 4 is the newest version of Bootstrap.It is the most popular HTML, CSS, and JavaScript framework for developing responsive, mobile-first websites.jQuery was created in 2006 by John Resig. It was designed to handle Browser Incompatibilities and to simplify HTML DOM Manipulation, Event Handling, Animations, and Ajax.</strong></p>
+	<button id="H1">Click me to Hide</button><br><br>
+	<button id="S1">Click me to Display</button>
+
+</body>
+</html>
